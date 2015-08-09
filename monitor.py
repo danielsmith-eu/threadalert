@@ -1,5 +1,4 @@
 from bs4 import BeautifulSoup
-from pync import Notifier
 import requests
 import sys
 import time
@@ -13,8 +12,10 @@ if len(sys.argv) == 2:
 with open(config_file) as config_open:
     config = json.load(config_open)
 
-grp = "monitor-{0}".format(config_file)
 out_type = config.get("output").lower()
+if out_type == "osx":
+    from pync import Notifier
+    grp = "monitor-{0}".format(config_file)
 pb = None
 
 def output(text, link):
