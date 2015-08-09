@@ -1,0 +1,8 @@
+{
+    "output": "pushbullet",
+    "pushbullet_access_token": "COPY_YOUR_TOKEN_FROM https://www.pushbullet.com/#settings/account ",
+    "watch": [
+        "http://www.flyertalk.com/forum/mileage-run-deals-372/",
+        "http://www.flyertalk.com/forum/premium-fare-deals-740/"
+    ]
+}
